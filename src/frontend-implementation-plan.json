@@ -1,0 +1,109 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add third Valentine step with love-themed picture gallery and update 3-step navigation",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "summary": "Restore a 3-step in-app flow and update navigation to Intro → Love Letter → Love-Themed Pictures.",
+      "acceptanceCriteria": [
+        "From the Intro page, the primary button navigates to the Love Letter page.",
+        "From the Love Letter page, the bottom button navigates to the new third page (not back to Intro).",
+        "The app compiles with no unused-step import errors and no references to the removed Memories flow in the running app."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update step state management from 2 steps to 3 steps (intro → letter → pictures), wire the new third step into the render flow, and ensure no lingering references to the removed Memories flow remain."
+        },
+        {
+          "path": "frontend/src/components/valentine/steps/LoveLetterStep.tsx",
+          "operation": "modify",
+          "description": "Change the bottom call-to-action so it advances to the new third step (Love-Themed Pictures) instead of returning to Intro; ensure any updated user-facing text is English. Use shadcn-ui Button/Card for consistent styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/valentine/steps/MemoriesStep.tsx",
+          "operation": "delete",
+          "description": "Remove the unused placeholder Memories step file to prevent confusion and ensure the running app has no references to the removed Memories flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "summary": "Create a new third Valentine step page that shows a 4-image love-themed gallery (teddy, flowers, chocolates, ring) with English UI text.",
+      "acceptanceCriteria": [
+        "The third page renders a visually coherent gallery/grid of 4 love-themed images (teddy, flowers, chocolates, ring).",
+        "All visible labels/headings on the third page are in English.",
+        "Images load from static assets (not from the backend)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/valentine/steps/LovePicturesStep.tsx",
+          "operation": "create",
+          "description": "Add a new third-step component that renders a visually coherent 2x2 (or responsive) gallery/grid for four static images (teddy, flowers, chocolates, ring), including English heading/captions as needed. Use shadcn-ui Card and Button components for layout consistency; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the new LovePicturesStep as the third step in the existing Valentine steps flow (ensure it is reachable from LoveLetter and properly mounted/unmounted with the step state)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Add an end-of-flow action on the third page to return to Intro and allow repeating the flow without refresh.",
+      "acceptanceCriteria": [
+        "The third page includes a prominent button (English text) that returns to the Intro step when clicked.",
+        "After returning to Intro, the user can proceed through the flow again without needing a refresh."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a dedicated handler to reset the flow back to Intro from the third step (without requiring a page refresh) and pass it into the third-step component."
+        },
+        {
+          "path": "frontend/src/components/valentine/steps/LovePicturesStep.tsx",
+          "operation": "modify",
+          "description": "Add a prominent English-labeled button (e.g., \"Back to Start\") that triggers the provided reset-to-Intro action. Use shadcn-ui Button for consistent CTA styling; verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "summary": "Add the required generated love-themed images as static assets under frontend/public/assets/generated and render them by exact filenames.",
+      "acceptanceCriteria": [
+        "All required images exist under `frontend/public/assets/generated/` with the exact filenames specified in this build request.",
+        "The third page references the images by those exact filenames and renders all of them."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/teddy-love.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated static asset: Cute teddy bear with hearts, romantic illustration (teddy-love.dim_800x800.png)."
+        },
+        {
+          "path": "frontend/public/assets/generated/flowers-bouquet.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated static asset: Bouquet of flowers in a romantic style, illustration (flowers-bouquet.dim_800x800.png)."
+        },
+        {
+          "path": "frontend/public/assets/generated/chocolates-gift.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated static asset: Assorted chocolates gift box, romantic illustration (chocolates-gift.dim_800x800.png)."
+        },
+        {
+          "path": "frontend/public/assets/generated/ring-sparkle.dim_800x800.png",
+          "operation": "create",
+          "description": "Add generated static asset: Engagement ring with sparkle highlights, romantic illustration (ring-sparkle.dim_800x800.png)."
+        },
+        {
+          "path": "frontend/src/components/valentine/steps/LovePicturesStep.tsx",
+          "operation": "modify",
+          "description": "Reference and render the four generated images using the exact static paths: frontend/public/assets/generated/teddy-love.dim_800x800.png, frontend/public/assets/generated/flowers-bouquet.dim_800x800.png, frontend/public/assets/generated/chocolates-gift.dim_800x800.png, frontend/public/assets/generated/ring-sparkle.dim_800x800.png. Use a responsive grid layout and set appropriate English alt text/captions. Verify the component's usage instructions before implementing."
+        }
+      ]
+    }
+  ]
+}

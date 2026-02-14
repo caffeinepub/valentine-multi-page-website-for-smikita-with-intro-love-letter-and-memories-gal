@@ -1,0 +1,80 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-reintroduce-a-3-step-in-app-flow-by-adding-a-new-third-step-after-the-love-letter-step-and-update-the-app-navigation-so-the-steps-are-intro-love-letter-love-themed-pictures-page",
+      "featureTitle": "Reintroduce a 3-step in-app flow by adding a new third step after the Love Letter step, and update the app navigation so the steps are: Intro -> Love Letter -> Love-Themed Pictures page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/valentine/steps/LoveLetterStep.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-new-third-step-component-a-new-page-step-under-the-existing-valentine-steps-that-displays-a-love-themed-picture-gallery-featuring-teddy-flowers-chocolates-and-a-ring-use-english-user-facing-text-for-any-headings-captions-and-buttons",
+      "featureTitle": "Create a new third step component (a new page/step under the existing Valentine steps) that displays a love-themed picture gallery featuring: teddy, flowers, chocolates, and a ring. Use English user-facing text for any headings, captions, and buttons.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/valentine/steps/LovePicturesStep.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-14"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-end-of-flow-action-on-the-new-third-page-include-a-clear-button-that-returns-the-user-to-the-intro-step-start-of-the-flow-using-english-user-facing-text",
+      "featureTitle": "Add an end-of-flow action on the new third page: include a clear button that returns the user to the Intro step (start of the flow), using English user-facing text.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/valentine/steps/LovePicturesStep.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-love-themed-images-as-generated-static-assets-and-render-them-on-the-new-third-page-from-assets-generated-paths",
+      "featureTitle": "Add the required love-themed images as generated static assets and render them on the new third page from `/assets/generated/*` paths.",
+      "files": [
+        "frontend/src/components/valentine/steps/LovePicturesStep.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

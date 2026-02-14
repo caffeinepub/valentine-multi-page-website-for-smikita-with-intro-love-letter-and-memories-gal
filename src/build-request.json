@@ -1,0 +1,96 @@
+{
+  "kind": "build_request",
+  "title": "Add a new third page with love-themed pictures (teddy, flowers, chocolates, ring) and update navigation flow",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-13",
+      "text": "Reintroduce a 3-step in-app flow by adding a new third step after the Love Letter step, and update the app navigation so the steps are: Intro -> Love Letter -> Love-Themed Pictures page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Make another third page where put some love theme pictures like teddy and some flowers and chocolates and ring"
+        ]
+      },
+      "acceptanceCriteria": [
+        "From the Intro page, the primary button navigates to the Love Letter page.",
+        "From the Love Letter page, the bottom button navigates to the new third page (not back to Intro).",
+        "The app compiles with no unused-step import errors and no references to the removed Memories flow in the running app."
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Create a new third step component (a new page/step under the existing Valentine steps) that displays a love-themed picture gallery featuring: teddy, flowers, chocolates, and a ring. Use English user-facing text for any headings, captions, and buttons.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Make another third page where put some love theme pictures like teddy and some flowers and chocolates and ring"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The third page renders a visually coherent gallery/grid of 4 love-themed images (teddy, flowers, chocolates, ring).",
+        "All visible labels/headings on the third page are in English.",
+        "Images load from static assets (not from the backend)."
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Add an end-of-flow action on the new third page: include a clear button that returns the user to the Intro step (start of the flow), using English user-facing text.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "Make another third page where put some love theme pictures like teddy and some flowers and chocolates and ring"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The third page includes a prominent button (English text) that returns to the Intro step when clicked.",
+        "After returning to Intro, the user can proceed through the flow again without needing a refresh."
+      ]
+    },
+    {
+      "id": "REQ-16",
+      "text": "Add the required love-themed images as generated static assets and render them on the new third page from `/assets/generated/*` paths.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-messages"
+        ],
+        "quotes": [
+          "put some love theme pictures like teddy and some flowers and chocolates and ring"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required images exist under `frontend/public/assets/generated/` with the exact filenames specified in this build request.",
+        "The third page references the images by those exact filenames and renders all of them."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`, `frontend/src/components/ui`.",
+    "Do not add new backend services or databases; keep the backend as the existing single Motoko actor (no backend changes required for this request).",
+    "All user-facing text introduced or changed by this request must be English."
+  ],
+  "nonGoals": [
+    "Do not restore the old Memories photo-upload gallery behavior or its error-handling gallery logic unless explicitly requested.",
+    "Do not add authentication changes (Internet Identity) or any new backend APIs for this feature.",
+    "Do not implement real-time features (e.g., chat/websockets) or third-party integrations."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cute teddy bear with hearts, romantic illustration (teddy-love.dim_800x800.png)",
+      "Bouquet of flowers in a romantic style, illustration (flowers-bouquet.dim_800x800.png)",
+      "Assorted chocolates gift box, romantic illustration (chocolates-gift.dim_800x800.png)",
+      "Engagement ring with sparkle highlights, romantic illustration (ring-sparkle.dim_800x800.png)"
+    ],
+    "edits": []
+  }
+}

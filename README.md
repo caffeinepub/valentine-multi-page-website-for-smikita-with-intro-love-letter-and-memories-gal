@@ -1,2 +1,3 @@
-# valentine-multi-page-website-for-smikita-with-intro-love-letter-and-memories-gal
-Exported from Caffeine project: Valentine multi-page website for Smikita with intro, love-letter, and love-themed pictures page
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

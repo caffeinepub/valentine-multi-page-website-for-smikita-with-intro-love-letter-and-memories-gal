@@ -1,0 +1,157 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 11,
+  "summary": "Valentine’s Day multi-page personal website for Smikita with intro message, love-letter page, and a new third page featuring love-themed images (teddy, flowers, chocolates, ring).",
+  "architectural_notes": [
+    "Reintroduce a 3-step navigation flow: Step 1 (Intro) -> Step 2 (Love letter) -> Step 3 (Love-themed pictures)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cute teddy bear with hearts, romantic illustration (teddy-love.dim_800x800.png)\n- Bouquet of flowers in a romantic style, illustration (flowers-bouquet.dim_800x800.png)\n- Assorted chocolates gift box, romantic illustration (chocolates-gift.dim_800x800.png)\n- Engagement ring with sparkle highlights, romantic illustration (ring-sparkle.dim_800x800.png)",
+  "existing_features": [
+    {
+      "id": "feature-replace-the-current-single-page-valentine-proposal-ui-with-a-3-step-page-flow-implemented-as-in-app-pages-steps-that-matches-the-user-s-requested-content-and-navigation-step-1-intro-step-2-love-letter-step-3-memories",
+      "title": "Replace the current single-page Valentine “proposal” UI with a 3-step page flow (implemented as in-app pages/steps) that matches the user’s requested content and navigation: Step 1 (Intro) -> Step 2 (Love letter) -> Step 3 (Memories).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-step-1-intro-page-with-the-exact-headline-message-happy-velentine-day-smikita-and-a-prominent-button-label-can-be-simple-e-g-click-that-navigates-to-step-2-when-pressed",
+      "title": "Implement Step 1 (Intro page) with the exact headline message: \"Happy Velentine Day Smikita ❤️‍🩹🫶🏻\" and a prominent button (label can be simple, e.g., \"Click\") that navigates to Step 2 when pressed.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-step-2-love-letter-page-that-displays-the-exact-message-below-and-a-bottom-positioned-button-that-navigates-to-step-3-when-pressed-happy-velentine-day-sweetheart-i-want-you-to-know-that-i-love-you-more-than-you-know-i-want-you-to-be-part-of-my-life-forever-i-know-we-fight-we-but-after-every-fight-we-became-strong-with-eachother-so-thank-you-for-by-mine-side-love-you-rashmalai",
+      "title": "Implement Step 2 (Love-letter page) that displays the exact message below, and a bottom-positioned button that navigates to Step 3 when pressed:\n\"Happy Velentine Day Sweetheart 💋🫂 I want you to know that I Love you More than you know I want you to be part of my life forever ♾️ I know we fight we but after every fight we became strong with eachother so Thank you for by mine side love you Rashmalai 😁🤤💋🫂\"",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-step-3-memories-page-that-renders-the-user-uploaded-photos-as-a-gallery-and-includes-a-button-that-triggers-a-visible-animation-each-time-it-is-clicked",
+      "title": "Implement Step 3 (Memories page) that renders the user-uploaded photos as a gallery and includes a button that triggers a visible animation each time it is clicked.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-coherent-romantic-visual-theme-across-all-three-steps-consistent-typography-spacing-and-backgrounds-using-a-warm-palette-pinks-reds-creams-and-heart-themed-decorative-motion-keep-the-design-consistent-across-pages",
+      "title": "Add a coherent romantic visual theme across all three steps (consistent typography, spacing, and backgrounds) using a warm palette (pinks/reds/creams) and heart-themed decorative motion; keep the design consistent across pages.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-user-s-3-uploaded-images-to-the-memories-page-gallery-and-ensure-they-render-correctly-in-the-existing-3-step-valentine-flow",
+      "title": "Add the user’s 3 uploaded images to the Memories page gallery and ensure they render correctly in the existing 3-step Valentine flow.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-the-memories-gallery-resilient-to-missing-incorrect-image-paths-by-handling-image-load-errors-and-showing-a-clear-english-fallback-state-per-missing-photo",
+      "title": "Make the Memories gallery resilient to missing/incorrect image paths by handling image load errors and showing a clear English fallback state per missing photo.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-verify-and-if-necessary-update-the-image-src-paths-used-in-frontend-src-components-valentine-steps-memoriesstep-tsx-so-they-exactly-match-the-actual-filenames-placed-in-the-app-s-static-assets-and-keep-the-gallery-order-as-3-photos",
+      "title": "Verify and, if necessary, update the image `src` paths used in `frontend/src/components/valentine/steps/MemoriesStep.tsx` so they exactly match the actual filenames placed in the app’s static assets, and keep the gallery order as 3 photos.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-memories-step-page-from-the-in-app-valentine-flow-so-the-app-has-only-2-steps-intro-love-letter-with-no-navigation-to-any-memories-gallery-content",
+      "title": "Remove the Memories step/page from the in-app Valentine flow so the app has only 2 steps: Intro -> Love Letter, with no navigation to any Memories/gallery content.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-love-letter-page-bottom-button-so-it-no-longer-references-memories-and-does-not-attempt-to-navigate-to-a-deleted-page-it-must-perform-a-sensible-end-of-flow-action-e-g-return-to-the-intro-page-using-english-user-facing-text",
+      "title": "Update the Love Letter page bottom button so it no longer references memories and does not attempt to navigate to a deleted page; it must perform a sensible end-of-flow action (e.g., return to the Intro page) using English user-facing text.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-remaining-memories-page-code-path-usage-from-the-app-entry-flow-imports-conditional-rendering-and-any-references-that-could-cause-build-errors-if-the-memories-step-component-remains-in-the-repo-it-must-be-unused-and-not-referenced-by-the-running-app",
+      "title": "Remove all remaining Memories page code-path usage from the app entry flow (imports, conditional rendering, and any references that could cause build errors). If the Memories step component remains in the repo, it must be unused and not referenced by the running app.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-reintroduce-a-3-step-in-app-flow-by-adding-a-new-third-step-after-the-love-letter-step-and-update-the-app-navigation-so-the-steps-are-intro-love-letter-love-themed-pictures-page",
+      "title": "Reintroduce a 3-step in-app flow by adding a new third step after the Love Letter step, and update the app navigation so the steps are: Intro -> Love Letter -> Love-Themed Pictures page.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-third-step-component-a-new-page-step-under-the-existing-valentine-steps-that-displays-a-love-themed-picture-gallery-featuring-teddy-flowers-chocolates-and-a-ring-use-english-user-facing-text-for-any-headings-captions-and-buttons",
+      "title": "Create a new third step component (a new page/step under the existing Valentine steps) that displays a love-themed picture gallery featuring: teddy, flowers, chocolates, and a ring. Use English user-facing text for any headings, captions, and buttons.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-end-of-flow-action-on-the-new-third-page-include-a-clear-button-that-returns-the-user-to-the-intro-step-start-of-the-flow-using-english-user-facing-text",
+      "title": "Add an end-of-flow action on the new third page: include a clear button that returns the user to the Intro step (start of the flow), using English user-facing text.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-love-themed-images-as-generated-static-assets-and-render-them-on-the-new-third-page-from-assets-generated-paths",
+      "title": "Add the required love-themed images as generated static assets and render them on the new third page from `/assets/generated/*` paths.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create opening page with message “Happy Velentine Day Smikita ❤️‍🩹🫶🏻” and a button to continue",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Create second page with the provided long Valentine message and a bottom button to go to the next page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a third page with love-themed pictures (teddy, flowers, chocolates, ring) as the final step in the flow",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Valentine multi-page website for Smikita with intro, love-letter, and love-themed pictures page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

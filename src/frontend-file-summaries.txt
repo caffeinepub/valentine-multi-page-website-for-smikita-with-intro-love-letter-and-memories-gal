@@ -1,0 +1,11 @@
+{
+  "frontend/src/App.tsx": "Main Valentine's Day app with 3-step flow (Intro → Love Letter → Love Pictures) using local state navigation, with the Love Pictures step providing a reset to return to Intro.",
+  "frontend/src/index.css": "Global styles with Valentine OKLCH color system, floating hearts, fade-in, scale-in, heart-beat, and heart-burst animations for romantic theme.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine's Day color tokens (valentine-primary, valentine-secondary, etc.) mapped to CSS variables for consistent theming.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Shared romantic layout wrapper with gradient background, floating hearts animation, and consistent spacing for all Valentine steps.",
+  "frontend/src/components/valentine/steps/IntroStep.tsx": "First step displaying \"Happy Velentine Day Smikita\" message with heart decorations and CTA button to advance to love letter.",
+  "frontend/src/components/valentine/steps/LoveLetterStep.tsx": "Second step showing the full love letter message with bottom-aligned \"Continue\" button that advances to the Love Pictures step.",
+  "frontend/src/components/valentine/steps/MemoriesStep.tsx": "Third step with responsive photo gallery displaying three uploaded memories with error handling that shows \"Photo unavailable\" fallback for failed image loads, and repeatable heart-burst animation triggered by button click.",
+  "frontend/src/components/valentine/HeartBurstAnimation.tsx": "Reusable animation component that generates 20 floating hearts with random positions and timing for celebration effect.",
+  "frontend/src/components/valentine/steps/LovePicturesStep.tsx": "Third step displaying a responsive 2x2 grid gallery of four love-themed images (teddy, flowers, chocolates, ring) with hover effects and a \"Back to Start\" button to reset the flow."
+}

@@ -1,0 +1,20 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no logic.",
+  "feature_evidence.json": "Feature evidence listing Valentine flow enhancements and related files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing key frontend files and Valentine flow components.",
+  "frontend/index.css": "Tailwind base styles with OKLCH theme variables and dark-mode overrides.",
+  "frontend/index.html": "HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Root component managing 3-step Valentine flow and rendering steps with footer and toaster.",
+  "frontend/src/components/valentine/HeartBurstAnimation.tsx": "Generates floating heart animations that auto-clear after completion.",
+  "frontend/src/components/valentine/steps/IntroStep.tsx": "Intro screen showing greeting, decoration images, and a button to advance.",
+  "frontend/src/components/valentine/steps/LoveLetterStep.tsx": "Displays love letter text with a bottom Continue button.",
+  "frontend/src/components/valentine/steps/LovePicturesStep.tsx": "Gallery of four love-themed images with captions and a Back to Start button.",
+  "frontend/src/components/valentine/steps/MemoriesStep.tsx": "Empty placeholder file with no implementation.",
+  "frontend/src/components/valentine/ValentineLayout.tsx": "Provides themed layout with background image and floating hearts wrapping all steps.",
+  "frontend/src/hooks/useActor.ts": "React hook creating an authenticated or anonymous backend actor and refreshing dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for managing Internet Identity login state, including loading, login, logout, and identity persistence via AuthClient.",
+  "frontend/src/index.css": "Defines Tailwind base styles and a Valentine-themed color palette with custom animations for light and dark modes.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and the InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, themes, animations, and Valentine palette mappings using CSS variables.",
+  "project_state.json": "Contains project metadata and requirements for a 3-step Valentine-themed website, including features, images, and navigation flow."
+}
